@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width:45%;
+            /* background-color: rgb(248, 205, 212); */
+        }
+        button{
+            border: 2px black solid;
+            border-radius: 10px;
+            background-color: red;
+            cursor: pointer;
+        }
+        div{
+            border: 1px rgb(142, 140, 145) solid;
+            background-color: rgb(247, 202, 232)
+        }
+        table{
+            border:none;
+        }
+        table tr td{
+            text-align: right;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <center style="color: blue;"><h2>Registration Form</h2></center>
+<center>
+    <table border="n" style="border-collapse: collapse;">
+        <tr>
+           <td><form><label align="right">First Name</label></td><td><input size="50" type="text" /></form></td>
+        </tr>
+        <tr>
+            <td><form><label align="right">Last Name</label></td><td><input size="50" type="text" /></form></td>
+         </tr>
+         <tr>
+            <td><form><label align="right">Email</label></td><td><input size="50" type="email" /></form></td>
+         </tr>
+         <tr>
+            <td><form><label align="right">Password</label></td><td><input size="50" type="password" /></form></td>
+         </tr>
+         <tr>
+            <td><form><label align="right">Re-enter Password</label></td><td><input size="50" type="password" /></form></td>
+         </tr>
+         <tr>
+            <td ><form><label style="text-align: left;">Gender</label></td>
+                <td style="text-align: left;"><input name="gen" type="radio" checked/>Male<br>
+                <hr><input name="gen" type="radio" />female
+            </form></td>
+         </tr>
+         <tr>
+            <td><form><label align="right">Age</label></td><td><input style="width: 100%;" type="number" /></form></td>
+         </tr>
+         <tr>
+            <td><form><label align="right">Phone Number</label></td><td><input style="width: 100%;" type="number" /></form></td>
+         </tr>
+         <tr>
+            <td><label align="right">Address:</label></td><td><textarea style="width: 100%;" maxlength="500"></textarea></form></td>
+         </tr>
+         <tr>
+            <td><form><label align="right">State</label></td><td><input size="50" type="text"></form></td>
+         </tr>
+         <tr>
+            <td><label align="right">Country</label></td>
+            <td style="text-align: left;"><select>
+                <option >Choose Your Country</option>
+                <option>Britan</option>
+                <option>Russia</option>
+                <option>India</option>
+                <option>China</option>
+                <option>Spain</option>
+            </select></td>
+         </tr>
+         <tr>
+            <td><form><label align="right">Languages Known</label></td>
+                <td><input type="checkbox" />English
+                    <input type="checkbox" />Kannada
+                    <input type="checkbox" />Hindi
+                    <input type="checkbox" />Telugu
+                    <input type="checkbox" />Tamil  
+            </form></td>
+         </tr>
+         <tr >
+            <td style="text-align: left;" colspan="2"><input type="checkbox" checked> Hereby I declare all the given are true</td>
+         </tr>
+         <tr>
+            <td align="right" colspan="2">log in to <a href="https://ethnus.com/">Ethnus</a> website</td>
+         </tr>
+    </table>
+</center><br>
+<center><button>Register</button></center>
+</div>
+
+<script>
+    function validateForm() {
+// Get the values of the form fields.
+var FirstName = document.getElementById('First Name').value;
+var LastName = document.getElementById('Last Name').value;
+var Email = document.getElementById('Email').value;
+var password = document.getElementById('Password').value;
+var Reenterpassword = document.getElementById('Re-enter password').value;
+var age = document.getElementById('Age').value;
+var Phonenumber = document.getElementById('Phone number').value;
+var address = document.getElementById('Address').value;
+
+
+// Check if the name field is empty.
+if (FirstName === '') {
+alert('Please enter your First name.');
+return false;
+}
+
+if (LastName === '') {
+alert('Please enter your Last name.');
+return false;
+}
+
+// Check if the email field is empty or if it is not a valid email address.
+if (Email === '' || !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+alert('Please enter a valid email address.');
+return false;
+}
+
+if(password === ''){
+alert('Please enter your password.');
+return false;
+} 
+
+if(Reenterpassword === ''){
+alert('Please re-enter your password.');
+return false;
+}  
+
+if(age === ''){
+alert('Please enter your age.');
+return false;
+}  
+
+if (Phonenumber === '') {
+alert('Please enter a phone number.');
+return false;
+}
+// Check if the message field is empty.
+if (address === '') {
+alert('Please enter address.');
+return false;
+}
+
+// If all of the fields are valid, return true.
+return true;
+}
+
+</script>
+</body>
+</html>
